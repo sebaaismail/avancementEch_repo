@@ -1,3 +1,5 @@
+package com.sebaainf.avcmtApp;
+
 /**
  * Created by ${sebaainf.com} on 27/11/2015.
  * https://bitbucket.org/sebaa_ismail
@@ -7,7 +9,7 @@ public class IsmDuration {
 
     /*private long duration;
 
-    public IsmDuration(long durationMillis) {
+    public com.sebaainf.avcmtApp.IsmDuration(long durationMillis) {
         this.duration = durationMillis;
     }
     */
