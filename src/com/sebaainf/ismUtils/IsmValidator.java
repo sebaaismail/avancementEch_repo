@@ -4,7 +4,7 @@ import com.jgoodies.binding.PresentationModel;
 import com.jgoodies.binding.value.AbstractValueModel;
 import com.jgoodies.validation.ValidationResult;
 import com.jgoodies.validation.Validator;
-import com.sebaainf.mentionMarDiv.common.MyApp;
+import com.sebaainf.avcmtApp.MyApp;
 
 /**
  * Created by ${sebaainf.com} on 04/04/2015.

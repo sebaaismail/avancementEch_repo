@@ -59,11 +59,10 @@ public class IsmDateFormatter extends JFormattedTextField.AbstractFormatter {
             if (value.getClass() == GregorianCalendar.class) {
                 GregorianCalendar gc = (GregorianCalendar) value;
                 date = gc.getTime();
-                System.out.println("hna GregorianCalendar .." + dateFormatter.format(date));
+
 
             } else if (value.getClass().getCanonicalName().equals("java.util.Date")) {
 //                Calendar cal2 = (Calendar) value;
-                System.out.println("hna .." + dateFormatter.format(value));
                 return dateFormatter.format(value);
             }
                     else {

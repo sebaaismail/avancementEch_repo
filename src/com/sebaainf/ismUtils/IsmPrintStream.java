@@ -54,7 +54,7 @@ public class IsmPrintStream extends PrintStream {
 
 
     public static void prepareLogFile() {
-        // for logging in log.text .....................
+        // for logStart in log.text .....................
 
         FileOutputStream log_file = null;
         try {
@@ -70,7 +70,7 @@ public class IsmPrintStream extends PrintStream {
         // loggin code finished .......................
     }
 
-    public static void logging(String text) {
+    public static void logStart(String text) {
 
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy  - HH:mm:ss");
         String espace = "                                         ......................................   ";
@@ -78,8 +78,15 @@ public class IsmPrintStream extends PrintStream {
 
     }
 
+    public static void logging(String text) {
+
+        String espace = "                                                                    ";
+        System.out.println(text + espace.substring(text.length()));
+
+    }
+
    /* public static void prepareLogFile() {
-        // for logging in log.text .....................
+        // for logStart in log.text .....................
 
         FileOutputStream log_file_temp = null;
         FileOutputStream log_file = null;
@@ -136,6 +143,6 @@ public class IsmPrintStream extends PrintStream {
     }*/
 
     // this code
-    // TODO later to logging at the beggining of log file
+    // TODO later to logStart at the beggining of log file
 
 }

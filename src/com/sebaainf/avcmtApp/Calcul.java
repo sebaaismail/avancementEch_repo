@@ -35,13 +35,13 @@ public class Calcul extends JFrame{
 
             int ech_actuel = scanner.nextInt();
             scanner.nextLine();
-            System.out.println("Entrer la date d'avancement d'chelon de cette année .... dd/MM/yyyy");
+            System.out.println("Entrer la date d'avancement d'chelon de cette annï¿½e .... dd/MM/yyyy");
 
             dateEffetEch = scanner.nextLine();
 
             sit.setEchelon_actuel(ech_actuel);
             Date date1 = df.parse(dateEffetEch);
-            sit.setDate_avcmt_ech_actuelAnnee(date1);
+            sit.setDate_ref_avcmt_echCetteAnnee(date1);
 
 
             System.out.println("Entrer old reliquat ....annee");

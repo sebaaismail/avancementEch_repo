@@ -3,11 +3,10 @@ package com.sebaainf.ismUtils;
 import com.jgoodies.binding.PresentationModel;
 import com.jgoodies.binding.adapter.BasicComponentFactory;
 import com.jgoodies.binding.value.ValueModel;
-import com.sebaainf.mentionMarDiv.citoyenPackage.CitoyenEditorModel;
-import com.sebaainf.mentionMarDiv.citoyenPackage.IPerson;
-import com.sebaainf.mentionMarDiv.common.MyApp;
-import com.sebaainf.mentionMarDiv.mentionPack.Mention;
-import com.sebaainf.mentionMarDiv.mentionPack.MentionEditorModel;
+;
+import com.sebaainf.avcmtApp.MyApp;
+import com.sebaainf.avcmtApp.SitAvcmtEch_model;
+import com.sebaainf.avcmtApp.SituationAvcmtEch;
 import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
@@ -80,7 +79,97 @@ public class IsmComponentFactory extends BasicComponentFactory {
 
         String modelgetclass = model.getClass().getSimpleName();
 
+        if ((model instanceof SitAvcmtEch_model)
+                &&(datePropertyName.equals(SituationAvcmtEch.PROPERTY_DATE_NOMINATION))) {
 
+            Date date = ((SituationAvcmtEch) model.getBean()).getDate_nomination();
+
+            if (date != null) {
+
+                Calendar calendar = new GregorianCalendar();
+                calendar.setTime(date);
+
+                datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                        calendar.get(Calendar.DAY_OF_MONTH));
+
+                datePicker.getJDateInstantPanel().getModel().setSelected(true);
+
+                try {
+                    datePicker.getJFormattedTextField().setText(formatter.valueToString(date));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } else if ((model instanceof SitAvcmtEch_model)
+                &&(datePropertyName.equals(SituationAvcmtEch.PROPERTY_DATE_AVCMT_OLD_ECH))) {
+
+            Date date = ((SituationAvcmtEch) model.getBean()).getDate_avcmt_old_ech();
+
+            if (date != null) {
+
+                Calendar calendar = new GregorianCalendar();
+                calendar.setTime(date);
+
+                datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                        calendar.get(Calendar.DAY_OF_MONTH));
+
+                datePicker.getJDateInstantPanel().getModel().setSelected(true);
+
+                try {
+                    datePicker.getJFormattedTextField().setText(formatter.valueToString(date));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } else if ((model instanceof SitAvcmtEch_model)
+                &&(datePropertyName.equals(SituationAvcmtEch.PROPERTY_DATE_REF_AVCMT_ECH_CETTE_ANNEE))) {
+
+            Date date = ((SituationAvcmtEch) model.getBean()).getDate_ref_avcmt_echCetteAnnee();
+
+            if (date != null) {
+
+                Calendar calendar = new GregorianCalendar();
+                calendar.setTime(date);
+
+                datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                        calendar.get(Calendar.DAY_OF_MONTH));
+
+                datePicker.getJDateInstantPanel().getModel().setSelected(true);
+
+                try {
+                    datePicker.getJFormattedTextField().setText(formatter.valueToString(date));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } else if ((model instanceof SitAvcmtEch_model)
+                &&(datePropertyName.equals(SituationAvcmtEch.PROPERTY_DATE_EFFET_OLD_RELIQ))) {
+
+            Date date = ((SituationAvcmtEch) model.getBean()).getDate_effet_old_reliq();
+
+            if (date != null) {
+
+                Calendar calendar = new GregorianCalendar();
+                calendar.setTime(date);
+
+                datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                        calendar.get(Calendar.DAY_OF_MONTH));
+
+                datePicker.getJDateInstantPanel().getModel().setSelected(true);
+
+                try {
+                    datePicker.getJFormattedTextField().setText(formatter.valueToString(date));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
+/*
         if ((model instanceof CitoyenEditorModel)) {
 
             Date date = ((IPerson) model.getBean()).getDate_naiss();
@@ -114,8 +203,8 @@ public class IsmComponentFactory extends BasicComponentFactory {
                 datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                         calendar.get(Calendar.DAY_OF_MONTH));
 
-            /*datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
-                    calendar.get(Calendar.DAY_OF_MONTH));*/
+            *//*datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH));*//*
                 datePicker.getJDateInstantPanel().getModel().setSelected(true);
 
                 try {
@@ -137,8 +226,8 @@ public class IsmComponentFactory extends BasicComponentFactory {
                 datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                         calendar.get(Calendar.DAY_OF_MONTH));
 
-            /*datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
-                    calendar.get(Calendar.DAY_OF_MONTH));*/
+            *//*datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH));*//*
                 datePicker.getJDateInstantPanel().getModel().setSelected(true);
 
                 try {
@@ -160,8 +249,8 @@ public class IsmComponentFactory extends BasicComponentFactory {
             datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                     calendar.get(Calendar.DAY_OF_MONTH));
 
-            /*datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
-                    calendar.get(Calendar.DAY_OF_MONTH));*/
+            *//*datePicker.getModel().setDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH));*//*
             datePicker.getJDateInstantPanel().getModel().setSelected(true);
 
             try {
@@ -170,14 +259,14 @@ public class IsmComponentFactory extends BasicComponentFactory {
                 e.printStackTrace();
             }
         }
-        }
+        }//*/
         datePicker.getModel().addPropertyChangeListener(new PropertyChangeListener() {
             @Override
             public void propertyChange(PropertyChangeEvent evt) {
 
                 Object newVal = datePicker.getModel().getValue();
                 // to change state of model and enable buttons valid and annule
-                model.setBufferedValue(datePropertyName, newVal);
+                model.setValue(datePropertyName, newVal);
                 //resetDatePicker(datePicker);
                     /*
                     JOptionPane.showMessageDialog(null, evt.getPropertyName() + " --> : "
@@ -193,7 +282,6 @@ public class IsmComponentFactory extends BasicComponentFactory {
             @Override
             public void propertyChange(PropertyChangeEvent evt) {
                 String text = evt.getNewValue() != null ? evt.getNewValue().toString() : "";
-                System.out.println("jtextField ketbeted");
 
             }
         };

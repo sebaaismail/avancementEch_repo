@@ -2,7 +2,7 @@ package com.sebaainf.ismUtils;
 
 import com.jgoodies.forms.internal.AbstractButtonPanelBuilder;
 import com.jgoodies.forms.layout.*;
-import com.sebaainf.mentionMarDiv.common.MyApp;
+import com.sebaainf.avcmtApp.MyApp;
 
 import javax.swing.*;
 import javax.swing.border.Border;

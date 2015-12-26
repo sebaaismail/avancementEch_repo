@@ -33,7 +33,8 @@ import com.jgoodies.forms.builder.ButtonBarBuilder;
 import com.jgoodies.forms.internal.AbstractButtonPanelBuilder;
 import com.jgoodies.forms.layout.*;
 import com.jgoodies.forms.util.LayoutStyle;
-import com.sebaainf.mentionMarDiv.common.MyApp;
+import com.sebaainf.avcmtApp.MyApp;
+
 
 import javax.swing.*;
 import java.awt.*;

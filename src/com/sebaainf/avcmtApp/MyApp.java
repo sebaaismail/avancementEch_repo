@@ -5,6 +5,7 @@ import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
 import javax.swing.*;
 import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -52,7 +53,10 @@ public class MyApp {
         }
 
         IsmPrintStream.prepareLogFile();
-        IsmPrintStream.logging("Welcome to Mentions app");
+        File log_file = new File("log.txt");
+        if (log_file.length()<10) {
+            IsmPrintStream.logStart("Welcome to Mentions app");
+        }
 
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -75,7 +79,8 @@ public class MyApp {
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         IsmAbstractJFrame.screenSize = toolkit.getScreenSize();
 
-        JFrame frame = new EditorSituationAvcmt_window();
+        SitAvcmtEch_model sitModel = new SitAvcmtEch_model(new SituationAvcmtEch());
+        JFrame frame = new EditorSitAvcmt_window(sitModel);
 
         frame.setVisible(true);
 
