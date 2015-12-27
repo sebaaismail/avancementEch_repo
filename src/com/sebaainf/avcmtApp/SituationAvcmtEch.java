@@ -208,7 +208,7 @@ public class SituationAvcmtEch extends Bean {
             if(per_new_rel.getDays()>0 || per_new_rel.getMonths()>0
                     || per_new_rel.getYears()>0) {
                 System.out.println("yes ismail");
-                per_new_rel.plus(Days.days(1));
+                per_new_rel.plus(Days.days(2));
                 String reliqStr = perFormatter.print(per_new_rel.normalizedStandard
                         (PeriodType.yearMonthDay()));
                 System.out.println(reliqStr);
@@ -217,7 +217,7 @@ public class SituationAvcmtEch extends Bean {
                 System.out.println(perFormatter.print(period_duree.normalizedStandard
                         (PeriodType.yearMonthDay())));
 
-               DateTime dt = new DateTime(date_ref_avcmt_echCetteAnnee).minus(per_new_rel);
+               DateTime dt = new DateTime(date_ref_avcmt_echCetteAnnee).minus(per_new_rel).plusDays(2);
 
             this.setDate_effet_avcmt_ech(dt.toDate());
             str = entrees1;
